@@ -38,12 +38,12 @@ header {
   }
 
   & a {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
   }
 
   & button {
-    font-weight: 600;
+    font-size: 15px;
     gap: 10px;
   }
 }

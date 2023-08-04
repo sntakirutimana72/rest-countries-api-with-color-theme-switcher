@@ -27,7 +27,28 @@
       </ul>
     </nav>
   </header>
-  <main></main>
+  <main>
+    <form class="flex items-center justify-between wrap filters">
+      <div class="flex items-center field">
+        <span class="material-symbols-outlined">search</span>
+        <label for="by-country" hidden>Filter by country</label>
+        <input type="text" name="country" id="by-country" placeholder="Search for a country..." />
+      </div>
+      <div class="flex flex-col select">
+        <div class="flex items-center justify-between select-trigger" role="button" data-value="">
+          <span>Filter by Region</span>
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+        <div class="flex flex-col select-options hidden">
+          <div class="select-option" data-value="Africa">Africa</div>
+          <div class="select-option" data-value="America">America</div>
+          <div class="select-option" data-value="Asia">Asia</div>
+          <div class="select-option" data-value="Europe">Europe</div>
+          <div class="select-option" data-value="Oceania">Oceania</div>
+        </div>
+      </div>
+    </form>
+  </main>
   <footer></footer>
 
   <script type="module" src="index.js"></script>

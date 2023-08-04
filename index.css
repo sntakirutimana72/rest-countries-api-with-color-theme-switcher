@@ -1,2 +1,67 @@
 @import './src/assets/css/base.css';
 @import './src/assets/css/responsiveness.css';
+
+main {
+  & .filters {
+    gap: 40px;
+    padding: 30px 15px;
+
+    &>div {
+      background: var(--bg-sec-color);
+      border-radius: 8px;
+    }
+
+    & .field {
+      flex: 1;
+      gap: 20px;
+      padding: 10px 30px;
+
+      & input {
+        flex: 1;
+        border: none;
+        padding: 10px 0;
+        color: inherit;
+        font-size: inherit;
+        background: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    & .select {
+      position: relative;
+      width: 68%;
+
+      & .select-trigger {
+        cursor: pointer;
+        font-size: inherit;
+        color: inherit;
+        padding: 18px 20px;
+      }
+
+      & .select-options {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        border-radius: 8px;
+        background: inherit;
+        z-index: 1;
+        padding: 18px;
+        gap: 10px;
+        transition: top 400ms ease-in-out;
+        top: calc(100% + 5px);
+
+        & .select-option {
+          font-size: inherit;
+          color: inherit;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
