@@ -1,4 +1,5 @@
-import { $select, $class } from '../helpers/selectors.js';
+import { $select, $class, $text } from '../helpers/selectors.js';
+import { toTitle } from '../helpers/utils.js';
 import { ThemeStore } from '../stores/index.js';
 
 export default class {
@@ -6,7 +7,7 @@ export default class {
 
   static initiate() {
     if (ThemeStore.isDarkMode()) {
-      this.flag();
+      this.flag('dark');
     }
 
     this.switcher.addEventListener('click', this.changeTheme);
@@ -24,25 +25,33 @@ export default class {
       .removeEventListener('change', this.changeThemeBySystemPreference);
   }
 
-  static flag() {
+  /**
+   *
+   * @param { string } theme
+   */
+  static flag(theme) {
     $class(document.body, 'dark');
     Array
       .from(this.switcher.children)
+      .slice(0, 2)
       .forEach((icon) => {
         $class(icon, 'hidden');
       });
+    $text(this.switcher.children[2], `${toTitle(theme)} Mode`);
   }
 
   static changeThemeBySystemPreference = () => {
-    if (ThemeStore.fetch()) {
+    const theme = ThemeStore.fetch();
+
+    if (theme) {
       this.unbinPrefersColor();
     } else {
-      this.flag();
+      this.flag(theme || 'light');
     }
   }
 
   static changeTheme = () => {
-    ThemeStore.changeMode();
-    this.flag();
+    const theme = ThemeStore.changeMode();
+    this.flag(theme);
   }
 }

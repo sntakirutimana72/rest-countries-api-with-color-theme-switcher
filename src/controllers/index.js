@@ -1,5 +1,5 @@
-import ThemeController from './theme';
-import FiltersController from './filters';
+import ThemeController from './theme.js';
+import FiltersController from './filters.js';
 
 export {
   FiltersController,

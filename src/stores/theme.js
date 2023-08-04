@@ -25,5 +25,6 @@ export default class {
   static changeMode() {
     const newTheme = this.fetch() === 'light' ? 'dark' : 'light';
     this.commit(newTheme);
+    return newTheme;
   }
 }
