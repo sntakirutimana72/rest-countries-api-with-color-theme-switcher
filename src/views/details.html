@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="utf-8">
+  <title>Details | REST Countries API With Color Theme Switcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/details.css" />
+</head>
+
+<body class="flex flex-col">
+  <header class="flex items-center justify-between">
+    <a href="../../index.html">Where in the world?</a>
+    <nav>
+      <ul class="flex items-center">
+        <li>
+          <button type="button" id="theme-switcher" class="flex items-center">
+            <span class="material-symbols-outlined hidden">
+              dark_mode
+            </span>
+            <span class="material-symbols-outlined">
+              light_mode
+            </span>
+            <span>Light Mode</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="flex justify-center items-center status">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </main>
+
+  <script type="module" src="../apps/details.js"></script>
+</body>
+
+</html>

@@ -31,7 +31,6 @@ body {
 header {
   padding: 30px 15px;
   background: var(--bg-sec-color);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
 
   & * {
     color: inherit;
@@ -93,7 +92,7 @@ button,
 }
 
 .shadow {
-  box-shadow: 0 2px 5px 2px var(--shadow-color);
+  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 .status {
@@ -103,20 +102,21 @@ button,
   gap: 5px;
 
   & span {
-    background: var(--blueish);
+    background: var(--text-color);
     border-radius: 10px;
     height: 15px;
     width: 10px;
+    opacity: 0.45;
     animation-name: heartbeat;
-    animation-duration: 800ms;
+    animation-duration: 700ms;
     animation-iteration-count: infinite;
 
     &:nth-child(even) {
-      animation-delay: 250ms;
+      animation-delay: 200ms;
     }
 
     &:last-child {
-      animation-delay: 500ms;
+      animation-delay: 400ms;
     }
   }
 }

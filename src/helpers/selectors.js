@@ -32,6 +32,14 @@ export const $select = (cssSelector) => document.querySelector(cssSelector);
 
 /**
  *
+ * @param { Element } ancestor
+ * @param { string } cssSelector
+ * @returns
+ */
+export const $from = (ancestor, cssSelector) => ancestor.querySelector(cssSelector);
+
+/**
+ *
  * @param { string } cssSelector
  * @returns
  */

@@ -1,0 +1,67 @@
+@import './base.css';
+@import './details.responsiveness.css';
+
+body {
+  min-height: 100vh;
+
+  & main {
+    flex: 1;
+    position: relative;
+
+    & .details {
+      margin: 30px;
+
+      & a {
+        color: inherit;
+        font-size: inherit;
+        padding: 10px 30px;
+        border-radius: 8px;
+        background: var(--bg-sec-color);
+        max-width: fit-content;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      & .details-wrapper {
+        gap: 30px;
+
+        & img {
+          justify-self: center;
+        }
+
+        &>section {
+          gap: 20px;
+
+          & .info {
+            gap: 50px;
+
+            & .details-para {
+              gap: 10px;
+
+              & li {
+                & span:last-child {
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+
+          & .details-borders {
+            gap: 15px;
+            margin-top: 10px;
+
+            & ul {
+              gap: 10px;
+
+              & li {
+                padding: 8px 20px;
+                border-radius: 8px;
+                background: var(--bg-sec-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
