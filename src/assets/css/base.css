@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
+
+
+:root {
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: hsl(200, 15%, 8%);
+  --bg-sec-color: hsl(0, 0%, 100%);
+  --header-bg: white;
+}
+
+.dark {
+  --bg-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --bg-sec-color: hsl(209, 23%, 22%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--header-bg);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.shadow {
+  box-shadow: 0 2px 5px 2px var(--shadow-color);
+}
+
+.status {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  gap: 5px;
+
+  & span {
+    background: var(--blueish);
+    border-radius: 10px;
+    height: 15px;
+    width: 10px;
+    animation-name: heartbeat;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+
+    &:nth-child(even) {
+      animation-delay: 250ms;
+    }
+
+    &:last-child {
+      animation-delay: 500ms;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    height: 15px;
+  }
+  to {
+    height: 30px;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    height: 15px;
+  }
+  to {
+    height: 40px;
+  }
+}

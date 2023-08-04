@@ -1,0 +1,8 @@
+{
+  "name": "rest-countries-api-with-color-theme-switcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sntakirutimana72/rest-countries-api-with-color-theme-switcher.git",
+  "author": "Steve <sntakirutimana72@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+@media screen and (min-width:768px) {
+  #root {}
+}
+
+@media screen and (min-width:1080px) {
+  #root {
+    padding: 0 70px;
+  }
+}
