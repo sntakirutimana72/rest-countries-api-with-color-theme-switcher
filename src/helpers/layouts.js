@@ -16,11 +16,11 @@ export const createCountryLayout = (item) => {
         <div class="shadow">
           <img src="${png}" alt="${official}" />
           <h3>${common}</h3>
-          <p>
-            <span><b>Population</b>: ${population}</span>
-            <span><b>Region</b>: ${region}</span>
-            <span><b>Capital</b>: ${capital[0]}</span>
-          </p>
+          <ul class="flex flex-col">
+            <li><span>Population</span>: <span>${population}</span></li>
+            <li><span>Region</span>: <span>${region}</span></li>
+            <li><span>Capital</span>: <span>${capital[0]}</span></li>
+          </ul>
         </div>
       </a>
     `
@@ -54,7 +54,7 @@ export const createDetailsLayout = (item) => {
         <img src="${png}" alt="${common}" />
         <section class="flex flex-col">
           <h2>${common}</h2>
-          <div class="flex flex-col info">
+          <div class="flex wrap justify-between info">
             <ul class="flex flex-col details-para">
               <li><span>Native Name</span>: <span>${native}</span></li>
               <li><span>Population</span>: <span>${population}</span></li>
@@ -68,7 +68,7 @@ export const createDetailsLayout = (item) => {
               <li><span>Languages</span>: <span>${lang.join(', ')}</span></li>
             </ul>
           </div>
-          <div class="flex wrap details-borders">
+          <div class="flex items-center wrap details-borders">
             <label>Border Countries:</label>
             <ul class="flex wrap">${neighbors}</ul>
           </div>

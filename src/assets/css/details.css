@@ -9,7 +9,7 @@ body {
     position: relative;
 
     & .details {
-      margin: 30px;
+      padding: 30px var(--p);
 
       & a {
         color: inherit;
@@ -19,20 +19,24 @@ body {
         background: var(--bg-sec-color);
         max-width: fit-content;
         gap: 10px;
-        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
       }
 
       & .details-wrapper {
-        gap: 30px;
+        gap: 40px;
 
         & img {
           justify-self: center;
         }
 
         &>section {
-          gap: 20px;
+          flex: 1;
+          align-self: center;
+          gap: 30px;
 
           & .info {
+            flex: 1;
             gap: 50px;
 
             & .details-para {
@@ -63,5 +67,11 @@ body {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .details-wrapper {
+    gap: 120px !important;
   }
 }

@@ -4,7 +4,7 @@
 main {
   & .filters {
     gap: 40px;
-    padding: 30px 15px;
+    padding: 40px var(--p);
 
     &>div {
       background: var(--bg-sec-color);
@@ -15,6 +15,7 @@ main {
       flex: 1;
       gap: 20px;
       padding: 10px 30px;
+      max-width: 500px;
 
       & input {
         flex: 1;
@@ -32,9 +33,9 @@ main {
 
     & .select {
       position: relative;
-      width: 68%;
 
       & .select-trigger {
+        gap: 50px;
         cursor: pointer;
         font-size: inherit;
         color: inherit;
@@ -70,12 +71,14 @@ main {
     margin-top: 30px;
 
     & .country-list {
-      gap: 30px;
+      margin: 0 var(--p);
+      justify-content: space-evenly;
+      gap: 40px;
 
-      & li {
+      & > li {
         background: var(--bg-sec-color);
         border-radius: 8px;
-        width: 300px;
+        width: 285px;
 
         & a {
           color: inherit;
@@ -94,11 +97,15 @@ main {
               padding: 20px 25px;
             }
 
-            & > p {
-              display: flex;
-              flex-direction: column;
-              gap: 5px;
+            & > ul {
+              gap: 7px;
               padding: 0 25px;
+
+              & li {
+                & span:last-child {
+                  opacity: 0.7;
+                }
+              }
             }
           }
         }
