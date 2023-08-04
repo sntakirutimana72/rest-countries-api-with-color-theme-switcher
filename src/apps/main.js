@@ -1,5 +1,6 @@
-import { ThemeController, FiltersController } from '../controllers/index.js';
+import { ThemeController, FiltersController, ApisController } from '../controllers/index.js';
 import { $select, $selectAll, $text, $attrib, $class } from '../helpers/selectors.js';
+import { createCountryLayout } from '../helpers/layouts.js';
 
 const selectList = $select('.select-options');
 const selectTrigger = $select('.select-trigger');
@@ -29,10 +30,23 @@ const bindSelect = () => {
   });
 };
 
+const populateData = () => {
+  ApisController
+    .getCountries()
+    .then(
+      (list) => {
+        const listView = $select('.country-list');
+        list.forEach(item => { listView.append(createCountryLayout(item)) })
+      },
+      () => { },
+    );
+};
+
 const configure = () => {
   ThemeController.initiate();
   FiltersController.initiate();
   bindSelect();
+  populateData()
 };
 
 export default configure;
