@@ -21,9 +21,11 @@ const onPopulate = () => {
   const params = (new URL(window.location)).searchParams;
   const name = params.get('name');
 
+  if (!name) return flag('refresh');
+
   ApisController
     .getDetails(name)
-    .then(([details,]) => {
+    .then(details => {
       $select('main').append(createDetailsLayout(details));
       flag('main');
     })
