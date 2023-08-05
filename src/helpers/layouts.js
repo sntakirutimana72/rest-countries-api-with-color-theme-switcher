@@ -20,7 +20,7 @@ export const createCountryLayout = (item) => {
           <img src="${png}" alt="${official}" />
           <h3>${common}</h3>
           <ul class="flex flex-col">
-            <li><span>Population</span>: <span>${population}</span></li>
+            <li><span>Population</span>: <span>${population.toLocaleString()}</span></li>
             <li><span>Region</span>: <span>${region}</span></li>
             <li><span>Capital</span>: <span>${capital[0]}</span></li>
           </ul>
@@ -37,6 +37,9 @@ export const createDetailsLayout = (item) => {
     name: { common, nativeName },
     population, subregion, region, capital, tld, currencies, languages, borders,
   } = item;
+
+  borders.sort();
+
   const currency = Object.values(currencies).map(({ name }) => name).join(', ');
   const natives = Object.values(nativeName);
   const native = natives[natives.length - 1]['common'];
@@ -60,7 +63,7 @@ export const createDetailsLayout = (item) => {
           <div class="flex wrap justify-between info">
             <ul class="flex flex-col details-para">
               <li><span>Native Name</span>: <span>${native}</span></li>
-              <li><span>Population</span>: <span>${population}</span></li>
+              <li><span>Population</span>: <span>${population.toLocaleString()}</span></li>
               <li><span>Region</span>: <span>${region}</span></li>
               <li><span>Sub Region</span>: <span>${subregion}</span></li>
               <li><span>Capital</span>: <span>${capital}</span></li>
