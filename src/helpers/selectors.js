@@ -70,6 +70,20 @@ export const $class = (element, className, force) => {
 
 /**
  *
+ * @param { Element } element
+ * @param { string[] } classeNames
+ * @param { boolean } force
+ */
+export const $classes = (element, classeNames, force) => {
+  if (force) {
+    element.classList.add(...classeNames);
+  } else {
+    element.classList.remove(...classeNames);
+  }
+};
+
+/**
+ *
  * @param { string } tagName
  * @returns
  */

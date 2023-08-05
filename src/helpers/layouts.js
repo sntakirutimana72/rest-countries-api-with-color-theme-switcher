@@ -1,4 +1,4 @@
-import { $class, $create, $html } from './selectors.js';
+import { $class, $create, $html, $attrib } from './selectors.js';
 import { toTitle } from './utils.js';
 
 export const createCountryLayout = (item) => {
@@ -9,11 +9,14 @@ export const createCountryLayout = (item) => {
   } = item;
   const element = $create('li');
 
+  $class(element, 'shadow');
+  $attrib(element, 'data-region', region.toLowerCase());
+  $attrib(element, 'data-filter', common.toLowerCase());
   $html(
     element,
     `
       <a href="./src/views/details.html?name=${common}">
-        <div class="shadow">
+        <div>
           <img src="${png}" alt="${official}" />
           <h3>${common}</h3>
           <ul class="flex flex-col">
@@ -42,11 +45,11 @@ export const createDetailsLayout = (item) => {
   const element = $create('div');
 
   lang.sort();
-  $class(element, 'details');
+  $class(element, 'details', true);
   $html(
     element,
     `
-      <a href="../../index.html" class="flex items-center shadow">
+      <a href="../../index.html" class="flex items-center">
         <span class="material-symbols-outlined">west</span>
         <span>Back</span>
       </a>

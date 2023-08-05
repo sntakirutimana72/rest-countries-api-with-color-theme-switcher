@@ -8,32 +8,32 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/details.css" />
 </head>
 
-<body class="flex flex-col">
+<body>
   <header class="flex items-center justify-between">
     <a href="../../index.html">Where in the world?</a>
     <nav>
       <ul class="flex items-center">
         <li>
           <button type="button" id="theme-switcher" class="flex items-center">
-            <span class="material-symbols-outlined hidden">
-              dark_mode
-            </span>
-            <span class="material-symbols-outlined">
-              light_mode
-            </span>
+            <span class="material-symbols-outlined hidden">dark_mode</span>
+            <span class="material-symbols-outlined">light_mode</span>
             <span>Light Mode</span>
           </button>
         </li>
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="flex justify-center items-center status">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </main>
+  <main class="main"></main>
+  <div class="flex justify-center items-center refresh hidden">
+    <button type="button" class="shadow">
+      <span class="material-symbols-outlined">replay</span>
+    </button>
+  </div>
+  <div class="flex justify-center items-center status">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <script type="module" src="../apps/details.js"></script>
 </body>

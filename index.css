@@ -1,5 +1,4 @@
 @import './src/assets/css/base.css';
-@import './src/assets/css/responsiveness.css';
 
 main {
   & .filters {
@@ -72,6 +71,7 @@ main {
 
     & .country-list {
       margin: 0 var(--p);
+      margin-bottom: 40px;
       justify-content: space-evenly;
       gap: 40px;
 
@@ -90,6 +90,7 @@ main {
             padding-bottom: 40px;
 
             & img {
+              max-width: 100%;
               border-radius: 8px 8px 0 0;
             }
 

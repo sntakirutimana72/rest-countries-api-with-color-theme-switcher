@@ -27,12 +27,12 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="main hidden">
     <section class="flex items-center justify-between wrap filters">
       <div class="flex items-center field shadow">
         <span class="material-symbols-outlined">search</span>
         <label for="by-country" hidden>Filter by country</label>
-        <input type="text" name="country" id="by-country" placeholder="Search for a country..." />
+        <input type="text" name="country" id="by-country" placeholder="Search for a country...">
       </div>
       <div class="flex flex-col select shadow">
         <div class="flex items-center justify-between select-trigger" role="button" data-value="">
@@ -41,7 +41,7 @@
         </div>
         <div class="flex flex-col select-options hidden">
           <div class="select-option" data-value="Africa">Africa</div>
-          <div class="select-option" data-value="America">America</div>
+          <div class="select-option" data-value="Americas">America</div>
           <div class="select-option" data-value="Asia">Asia</div>
           <div class="select-option" data-value="Europe">Europe</div>
           <div class="select-option" data-value="Oceania">Oceania</div>
@@ -52,7 +52,16 @@
       <ul class="flex wrap country-list"></ul>
     </section>
   </main>
-  <footer></footer>
+  <div class="flex justify-center items-center refresh hidden">
+    <button type="button" class="shadow">
+      <span class="material-symbols-outlined">replay</span>
+    </button>
+  </div>
+  <div class="flex justify-center items-center status">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <script type="module" src="index.js"></script>
 </body>
