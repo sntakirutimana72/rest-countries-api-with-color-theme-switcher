@@ -36,6 +36,11 @@ body {
   font-size: var(--font-size);
 }
 
+a {
+  color: inherit;
+  font-size: inherit;
+}
+
 header {
   padding: 30px var(--p);
   background: var(--bg-sec-color);
@@ -151,6 +156,7 @@ button,
   from {
     height: 15px;
   }
+
   to {
     height: 30px;
   }
@@ -160,6 +166,7 @@ button,
   from {
     height: 15px;
   }
+
   to {
     height: 40px;
   }

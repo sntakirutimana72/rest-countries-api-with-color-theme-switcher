@@ -8,9 +8,7 @@
     margin: 0 10px;
     padding: 30px var(--p);
 
-    & a {
-      color: inherit;
-      font-size: inherit;
+    &>a {
       padding: 10px 30px;
       border-radius: 8px;
       background: var(--bg-sec-color);
@@ -58,6 +56,12 @@
               padding: 8px 20px;
               border-radius: 8px;
               background: var(--bg-sec-color);
+
+              & a {
+                /* padding: 8px 20px;
+                border-radius: 8px;
+                background: var(--bg-sec-color); */
+              }
             }
           }
         }

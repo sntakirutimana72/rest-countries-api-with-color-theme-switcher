@@ -31,6 +31,19 @@ export const createCountryLayout = (item) => {
   return element;
 };
 
+/**
+ *
+ * @param { string } name
+ * @returns
+ */
+const neighborLayout = (name) => (
+  `
+    <li class="shadow">
+      <a href="./details.html?name=${name}">${toTitle(name)}</a>
+    </li>
+  `
+);
+
 export const createDetailsLayout = (item) => {
   const {
     flags: { png },
@@ -44,7 +57,7 @@ export const createDetailsLayout = (item) => {
   const natives = Object.values(nativeName);
   const native = natives[natives.length - 1]['common'];
   const lang = Object.values(languages);
-  const neighbors = borders.map(i => `<li class="shadow">${toTitle(i)}</li>`).join('');
+  const neighbors = borders.map(neighborLayout).join('');
   const element = $create('div');
 
   lang.sort();
